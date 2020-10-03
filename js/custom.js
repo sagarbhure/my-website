@@ -111,7 +111,6 @@ jQuery(function() {
 	
 	// run rlightbox
 	
-	$( ".lb_title-overwritten" ).lightbox({overwriteTitle: true});
 });
 });
 
