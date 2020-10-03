@@ -110,7 +110,7 @@ jQuery(function() {
 	$stylesheets = $( "a[id^=theme-]" );
 	
 	// run rlightbox
-	$( ".lb" ).rlightbox();
+	
 	$( ".lb_title-overwritten" ).rlightbox({overwriteTitle: true});
 });
 });
