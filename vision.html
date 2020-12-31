@@ -1,62 +1,51 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Race car game</title>
+    <script src="js/three.min.js"></script>
+    <script src="js/Detector.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/THREEx.KeyboardState.js"></script>
+    <script src="js/THREEx.FullScreen.js"></script>
+    <script src="js/THREEx.WindowResize.js"></script>
+    <style>
+        body {
+            background-color: #000;
+            overflow: hidden;
+        }
 
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <!-- Metas Page details-->
-        <title>Sagar Bhure</title>
-        <link rel="icon" href="images/icon.ico">
-        <meta name="description" content="Software Engineer">
-        <meta name="author" content="">
-        <!-- Mobile Specific Metas-->
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="HandheldFriendly" content="true">
-        <!--main style-->
-        <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
-        <!--google font style-->
-        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-        <!--font-family: 'Metrophobic', serif;-->
-        <link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,600,400italic,600italic' rel='stylesheet' type='text/css'> 
-        <!--font-family: 'Open Sans', sans-serif;-->
-        <!-- font icon css style-->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <style>
-            
-        df-messenger {
-                    --df-messenger-bot-message: #409ca1;
-                    --df-messenger-chat-background-color: #fafafa;
-                    --df-messenger-font-color: white;
-                    --df-messenger-send-icon: #a5d1d4;
-                    --df-messenger-user-message: #c26125;
-                }	
-        </style>
-        </head>
+        canvas {
+            display: block;
+            margin: 0 auto;
+            top: 50px;
+        }
 
+        .score-container {
+            /*background-color: red;*/
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            transition: transform 0.5s 4s;
+        }
+
+        .score-container #score {
+            color: white;
+            font-size: 8vh;
+            font-family: 'Exo', sans-serif;
+            font-weight: 700;
+        }
+    </style>
+</head>
 <body>
-<img src="https://timer.getmara.com/ZGF0ZT0yMDIwLTExLTA2JnRpbWU9MjMlM0EwMCZ0aW1lem9uZT1Bc2lhJTJGQ2FsY3V0dGEmYmNrQ29sb3I9RkZGRkZGJmZvbnRDb2xvcj0wMDAwMDAmbGFiZWxDb2xvcj00NDQ0NDQmZGF5TGFiZWw9ZGF5cyZob3VyTGFiZWw9aG91cnMmbWluTGFiZWw9bWluJnNlY0xhYmVsPXNlYw==.gif" />
-    <script type="text/javascript">
-        var sc_project=12403105; 
-        var sc_invisible=1; 
-        var sc_security="0d09d8c3"; 
-        var sc_https=1; 
-        </script>
-        <script type="text/javascript"
-        src="https://www.statcounter.com/counter/counter.js" async></script>
-        <noscript><div class="statcounter"><a title="Web Analytics Made Easy -
-        StatCounter" href="https://statcounter.com/" target="_blank"><img
-        class="statcounter" src="https://c.statcounter.com/12403105/0/0d09d8c3/1/"
-        alt="Web Analytics Made Easy - StatCounter"></a></div></noscript>
-        <!-- End of Statcounter Code -->
-        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-        <df-messenger
-          chat-icon="https://storage.googleapis.com/cloudprod-apiai/759acb19-cf6b-4b50-841c-7bd956219b0c_x.png"
-          intent="WELCOME"
-          chat-title="AskMe!!!"
-          agent-id="2d671ac6-366c-4423-8568-2b2ba9603c4a"
-          language-code="en"
-        ></df-messenger>
-</body>
+<div class="score-container">
+    <div id="score"></div>
+</div>
+<!--<div id="message" style="color:green; background-color: #a06cc2"></div>-->
 
+<div id="ThreeJS"></div>
+<audio src="sound/explode.mp3" preload="auto" id="explode_sound"></audio>
+
+<script src="js/index.js"></script>
+</body>
 </html>
