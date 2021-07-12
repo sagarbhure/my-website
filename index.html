@@ -40,30 +40,30 @@ df-messenger {
 </head>
 <body onload="brython()" onUnload="GUnload()">
 	<script type="text/python">
-            	from __future__ import unicode_literals
-		import youtube_dl
-		import argparse
-		import time
-		import os
+	from __future__ import unicode_literals
+	import youtube_dl
+	import argparse
+	import time
+	import os
 
-		def get_arguments():
-		    parser = argparse.ArgumentParser()
-		    parser.add_argument('-url', type=str,
-					help='path to audiofile')
-		    arguments = parser.parse_args()
-		    return arguments
+	def get_arguments():
+	    parser = argparse.ArgumentParser()
+	    parser.add_argument('-url', type=str,
+				help='path to audiofile')
+	    arguments = parser.parse_args()
+	    return arguments
 
-		def download_video(title, url):
-		    ydl_opts = {'outtmpl': '{}.%(ext)s'.format(title)}
-		    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-			ydl.download([url])
+	def download_video(title, url):
+	    ydl_opts = {'outtmpl': '{}.%(ext)s'.format(title)}
+	    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+		ydl.download([url])
 
-		if __name__ == '__main__':
+	if __name__ == '__main__':
 
-		    start = time.time()
-		    download_video('tmp','https://www.youtube.com/watch?v=jojAk-wMa5Y')   
-		    end = time.time()
-		    print('elapsed downloading time: {}'.format(end - start))
+	    start = time.time()
+	    download_video('tmp','https://www.youtube.com/watch?v=jojAk-wMa5Y')   
+	    end = time.time()
+	    print('elapsed downloading time: {}'.format(end - start))
             </script>
 
             <input id="zone"><button id="mybutton">click !</button>
