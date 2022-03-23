@@ -195,7 +195,24 @@ df-messenger {
         </div>
       	
       </div>     
-    </div>    
+    </div> 
+	  	    <script>
+        $(function() {
+            $(".element").typed({
+                strings: ["a Security Researcher", "a Software Engineer", "an Avid Learner", "Sagar Bhure"],
+                typeSpeed: 30,
+                startDelay: 500,
+                backDelay: 250,
+                callback: function() {
+                    lift();
+                }
+            });
+            function lift() {
+                $('.element').addClass("heading").fadeIn(150).fadeOut(50).fadeIn(100).fadeOut(50).fadeIn(100).fadeOut(50).fadeIn(1400);
+                $('.hideIt').delay(3800).addClass('showIt');
+            }
+        });
+    </script>
   </section>
   <!--about us end--> 
   <!--Skillset start -->
@@ -540,23 +557,7 @@ df-messenger {
 
 <!--modernizr js--> 
 <script type="text/javascript" src="js/modernizr.custom.26633.js"></script> 
-	    <script>
-        $(function() {
-            $(".element").typed({
-                strings: ["a Security Researcher", "a Software Engineer", "an Avid Learner", "Sagar Bhure"],
-                typeSpeed: 30,
-                startDelay: 500,
-                backDelay: 250,
-                callback: function() {
-                    lift();
-                }
-            });
-            function lift() {
-                $('.element').addClass("heading").fadeIn(150).fadeOut(50).fadeIn(100).fadeOut(50).fadeIn(100).fadeOut(50).fadeIn(1400);
-                $('.hideIt').delay(3800).addClass('showIt');
-            }
-        });
-    </script>
+
 <!--jquary min js--> 
 <script type="text/javascript" src="js/jquery.min.js"></script> 
 <script src="js/bootstrap.min.js"></script> 
