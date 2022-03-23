@@ -36,6 +36,14 @@ df-messenger {
             --df-messenger-send-icon: #a5d1d4;
             --df-messenger-user-message: #c26125;
         }	
+	        .heading-2 {
+            color: #d96459;
+            text-shadow: 0 0 .313em #d96459, 0 0 .625em #d96459
+        }
+
+        .hideIt {
+            opacity: 0
+        }
 </style>
 </head>
 <body onload="brython()" onUnload="GUnload()">
@@ -114,6 +122,9 @@ df-messenger {
     <div class="bannerText">
         <h1>I'm Sagar Bhure</h1>
 	    <h1> I'm <span class=element></span></h1>
+	    
+            <h2 class="hideIt heading-2"></h2>
+            <h3 class="hideIt heading-2"></h3>
         <h3>"Whats the object-oriented way to become wealthy?" - Inheritance</h3>
 	    <!--<a href= "vision.html"><button class="button">Three.js Game</button></a>-->
         <style>
